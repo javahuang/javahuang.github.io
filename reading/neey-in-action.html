@@ -1,0 +1,934 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>netty in action · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../post/" />
+    
+    
+    <link rel="prev" href="tcp-ip.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/linux-basis.html">
+            
+                <a href="../linux/linux-basis.html">
+            
+                    
+                    linux basis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/linux-filesystem.html">
+            
+                <a href="../linux/linux-filesystem.html">
+            
+                    
+                    linux filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux/linux-commands.html">
+            
+                <a href="../linux/linux-commands.html">
+            
+                    
+                    linux command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux/linux-filesystem.html">
+            
+                <a href="../linux/linux-filesystem.html">
+            
+                    
+                    linux filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../awesome/">
+            
+                <a href="../awesome/">
+            
+                    
+                    Awesome
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../awesome/git.html">
+            
+                <a href="../awesome/git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../awesome/gitbook.html">
+            
+                <a href="../awesome/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../docker/">
+            
+                <a href="../docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../docker/docker-basis.html">
+            
+                <a href="../docker/docker-basis.html">
+            
+                    
+                    docker basis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../docker/docker-swarm.html">
+            
+                <a href="../docker/docker-swarm.html">
+            
+                    
+                    docker swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../docker/dockerfile.html">
+            
+                <a href="../docker/dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../docker/docker-composefile.html">
+            
+                <a href="../docker/docker-composefile.html">
+            
+                    
+                    docker composefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../docker/docker-practice.html">
+            
+                <a href="../docker/docker-practice.html">
+            
+                    
+                    docker practice
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../javascript/canvas.html">
+            
+                <a href="../javascript/canvas.html">
+            
+                    
+                    canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../javascript/react/">
+            
+                <a href="../javascript/react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../javascript/react/immer.html">
+            
+                <a href="../javascript/react/immer.html">
+            
+                    
+                    immer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../javascript/tools/">
+            
+                <a href="../javascript/tools/">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../javascript/tools/babel.html">
+            
+                <a href="../javascript/tools/babel.html">
+            
+                    
+                    babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../javascript/tools/gulp.html">
+            
+                <a href="../javascript/tools/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../javascript/tools/webpack.html">
+            
+                <a href="../javascript/tools/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Reading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="css-world.html">
+            
+                <a href="css-world.html">
+            
+                    
+                    CSS world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="design-pattern-guru.html">
+            
+                <a href="design-pattern-guru.html">
+            
+                    
+                    Design Pattern guru
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="compilers.html">
+            
+                <a href="compilers.html">
+            
+                    
+                    compilers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="tcp-ip.html">
+            
+                <a href="tcp-ip.html">
+            
+                    
+                    tcp ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.5" data-path="neey-in-action.html">
+            
+                <a href="neey-in-action.html">
+            
+                    
+                    netty in action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../post/">
+            
+                <a href="../post/">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../post/00-build-myself-developer-knowledgemap.html">
+            
+                <a href="../post/00-build-myself-developer-knowledgemap.html">
+            
+                    
+                    my knowledgemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../post/01-cpu-and-kernal.html">
+            
+                <a href="../post/01-cpu-and-kernal.html">
+            
+                    
+                    cpu and kernal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../post/02-linux-select.html">
+            
+                <a href="../post/02-linux-select.html">
+            
+                    
+                    linux select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../post/03-thread-vs-process.html">
+            
+                <a href="../post/03-thread-vs-process.html">
+            
+                    
+                    thread vs process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../post/04-css-in-js.html">
+            
+                <a href="../post/04-css-in-js.html">
+            
+                    
+                    css in js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >netty in action</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="netty-in-action">netty-in-action</h1>
+<p>Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers &amp; clients.</p>
+<p><img src="assets/netty-in-action-00-blocking-io.jpg" alt="blocking-io"></p>
+<ul>
+<li><em>accept()</em> blocks until a connection is established on the ServerSocket , then returns a new Socket for communication between the client and the server. The ServerSocket then resumes listening for incoming connections.</li>
+<li>A <em>BufferedReader</em> and a <em>PrintWriter</em> are derived from the Socket&#x2019;s input and output streams . The former reads text from a character input stream, the latter prints formatted representations of objects to a text output stream.</li>
+<li><em>readLine()</em> blocks until a string terminated by a linefeed or carriage return is read in .</li>
+<li>The client&#x2019;s request is processed</li>
+</ul>
+<p>&#x8FD9;&#x79CD; old io &#x9700;&#x8981;&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x7EBF;&#x7A0B;&#x5355;&#x72EC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; thread &#x6765;&#x5904;&#x7406;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#xFF0C;&#x4E00;&#x662F;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x4F1A;&#x6709;&#x5F88;&#x591A;&#x7EBF;&#x7A0B;&#x5904;&#x4E8E;&#x4F11;&#x7720;&#x72B6;&#x6001;&#xFF0C;&#x4E8C;&#x662F;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x4F1A;&#x88AB;&#x5206;&#x914D; 64kb-1mb &#x7684;&#x6808;&#x5185;&#x5B58;&#xFF0C;&#x6D6A;&#x8D39;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x4E09;&#x662F;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x591A;&#x4E86;&#xFF0C;&#x8D85;&#x8FC7;&#x4E86;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#xFF0C;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x5F00;&#x9500;&#x5927;</p>
+<blockquote>
+<p>NIO was originally an acronym for New Input/Output, but the Java API has been around long enough that it is no longer new. Most users now think of NIO as signifying non-blocking I/O, whereas blocking I/O is OIO or old input/output. You may also encounter references to plain I/O.</p>
+</blockquote>
+<p>Today, as system users we take this capability for granted, and as developers we expect the bar to move even higher. We know there will always be demands for greater throughput and scalability&#x2014;to be delivered at lower cost.  &#x5927;&#x7684;&#x541E;&#x5410;&#x91CF;&#x548C;&#x53EF;&#x4F38;&#x7F29;&#x6027;&#xFF0C;&#x4EE5;&#x66F4;&#x4F4E;&#x7684;&#x6210;&#x672C;&#x4EA4;&#x4ED8;</p>
+<p>Hence, a fundamental concept of object orientation: hide the complexity of underlying implementations behind simpler abstractions. &#x56E0;&#x6B64;&#xFF0C;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x662F;&#xFF1A;&#x5C06;&#x57FA;&#x7840;&#x5B9E;&#x73B0;&#x7684;&#x590D;&#x6742;&#x6027;&#x9690;&#x85CF;&#x5728;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x62BD;&#x8C61;&#x540E;&#x9762;&#x3002;</p>
+<p>Spring is probably the best known and is actually an entire ecosystem of application frameworks addressing object creation, batch processing, database programming, and so on.</p>
+<p>In the networking domain, Netty is the preeminent framework for Java.[4] Harnessing the power of Java&#x2019;s advanced APIs behind an easy-to-use API, Netty leaves you free to focus on what really interests you&#x2014;the unique value of your application.</p>
+<p>Better throughput and lower latency than core Java APIs. Reduced resource consumption thanks to pooling and reuse. Minimal memory copying.</p>
+<p>handwritten dispatch code that would otherwise be required. Under the covers, an EventLoop is assigned to each Channel to handle all of the events, including</p>
+<ul>
+<li>Registration of interesting events</li>
+<li>Dispatching events to ChannelHandlers</li>
+<li>Scheduling further actions</li>
+</ul>
+<p>The EventLoop itself is driven by <strong>only one thread that handles all of the I/O events</strong> for one Channel and does not change during the lifetime of the EventLoop. This simple and powerful design eliminates any concern you might have about synchronization in your ChannelHandlers, so you can focus on providing the right logic to be executed when there is interesting data to process. As we&#x2019;ll see when we explore Netty&#x2019;s threading model in detail, the API is simple and compact.</p>
+<p>What is the connection between asynchrony and scalability?</p>
+<ul>
+<li>Non-blocking network calls free us from having to wait for the completion of an operation. Fully asynchronous I/O builds on this feature and carries it a step further: an asynchronous method returns immediately and notifies the user when it is complete, directly or at a later time.</li>
+<li>Selectors allow us to monitor many connections for events with many fewer threads.</li>
+</ul>
+<p>netty &#x7684;&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF0C;Netty&#x2019;s primary building blocks:</p>
+<ul>
+<li><em>Channel</em>s<blockquote>
+<p>think of a Channel as a vehicle for incoming (inbound) and outgoing (outbound) data. As such, it can be open or closed, connected or disconnected.</p>
+</blockquote>
+</li>
+<li>Callbacks<blockquote>
+<p>Netty uses callbacks internally when handling events; when a callback is triggered the event can be handled by an implementation of interface ChannelHandler</p>
+</blockquote>
+</li>
+<li><em>Future</em>s<blockquote>
+<p>jdk Future allow you only to check manually whether the operation has completed or to block until it does
+ Netty provides its own implementation, <em>ChannelFuture</em>, for use when an asynchronous operation is executed.</p>
+</blockquote>
+</li>
+<li>Events and handlers<blockquote>
+<p>Netty uses distinct events to notify us about changes of state or the status of operations.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="netty-&#x7EC4;&#x4EF6;&#x548C;&#x8BBE;&#x8BA1;">Netty &#x7EC4;&#x4EF6;&#x548C;&#x8BBE;&#x8BA1;</h2>
+<p>From a high-level perspective, Netty addresses two corresponding areas of concern, which we might label broadly as technical and architectural. First, its asynchronous and event-driven implementation, built on Java NIO, guarantees maximum application performance and scalability under heavy load. Second, Netty embodies a set of design patterns that decouple application logic from the network layer, simplifying development while maximizing the testability, modularity, and reusability of code. &#x9996;&#x5148; netty &#x57FA;&#x4E8E; java NIO &#x7684;&#x5F02;&#x6B65;&#x548C;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;&#x9AD8;&#x8D1F;&#x8F7D;&#x4E0B;&#x5E94;&#x7528;&#x7684;&#x6700;&#x9AD8;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x4F38;&#x7F29;&#x6027;&#x3002;&#x5176;&#x6B21;&#xFF0C;netty &#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5C06;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x903B;&#x8F91;&#x548C;&#x7F51;&#x7EDC;&#x5C42;&#x5206;&#x79BB;&#xFF0C;&#x6700;&#x5927;&#x7A0B;&#x5EA6;&#x7684;&#x63D0;&#x9AD8;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#xFF0C;&#x6A21;&#x5757;&#x5316;&#x548C;&#x53EF;&#x91CD;&#x7528;&#x6027;&#x3002;</p>
+<h3 id="channel">Channel</h3>
+<p>Netty&#x2019;s Channel interface provides an API that greatly reduces the complexity of working directly with Sockets. Additionally, Channel is the root of an extensive class hierarchy having many predefined, specialized implementations</p>
+<h3 id="eventloop">EventLoop</h3>
+<p>The <strong>EventLoop</strong> defines Netty&#x2019;s core abstraction for handling events that occur during the lifetime of a connection.</p>
+<ul>
+<li>An EventLoopGroup contains one or more EventLoops.</li>
+<li>An <strong>EventLoop is bound to a single Thread</strong> for its lifetime.</li>
+<li>All I/O events processed by an EventLoop are handled on its dedicated Thread.</li>
+<li>A Channel is registered for its lifetime with a single EventLoop.</li>
+<li>A single EventLoop may be assigned to one or more Channels.</li>
+</ul>
+<p><img src="assets/netty-event-loop-all.jpg" alt="netty-event-loop-all"></p>
+<p>As we&#x2019;ve explained, all I/O operations in Netty are asynchronous. Because an operation may not return immediately, we need a way to determine its result at a later time. For this purpose, Netty provides <em>ChannelFuture</em>, whose <em>addListener()</em> method registers a <strong>ChannelFutureListener to be notified when an operation has completed</strong>(whether or not successfully).</p>
+<p>As an example, ChannelInboundHandler is a subinterface you&#x2019;ll implement frequently. This type receives inbound events and data to be handled by your application&#x2019;s business logic. You can also flush data from a ChannelInboundHandler when you&#x2019;re sending a response to a connected client. The business logic of your application will often reside in one or more ChannelInboundHandlers.</p>
+<p>A <strong>ChannelPipeline</strong> provides a container for a chain of ChannelHandlers and defines an API for propagating the flow of inbound and outbound events along the chain. When a Channel is created, it is automatically assigned its own ChannelPipeline.</p>
+<p><strong>ChannelHandlers are installed in the ChannelPipeline</strong> as follows:</p>
+<ul>
+<li>A ChannelInitializer implementation is registered with a ServerBootstrap.</li>
+<li>When ChannelInitializer.initChannel() is called, the ChannelInitializer installs a custom set of ChannelHandlers in the pipeline.</li>
+<li>The ChannelInitializer removes itself from the ChannelPipeline.</li>
+</ul>
+<p>There are <strong>two ways of sending messages in Netty.</strong> You can write directly to the Channel or write to a ChannelHandlerContext object associated with a ChannelHandler. The former approach causes the message to start from the tail of the ChannelPipeline, the latter causes the message to start from the next handler in the ChannelPipeline.</p>
+<p>When a <code>ChannelHandler</code> is added to a <code>ChannelPipeline</code>, it&#x2019;s assigned a <code>ChannelHandlerContext</code>, which <strong>represents the binding between a ChannelHandler and the ChannelPipeline</strong>. Although this object can be used to obtain the underlying Channel, it&#x2019;s mostly utilized to write outbound data.</p>
+<p>Netty&#x2019;s <strong>bootstrap</strong> classes provide containers for the configuration of an application&#x2019;s network layer, which involves either binding a process to a given port or connecting one process to another one running on a specified host at a specified port.</p>
+<p><img src="assets/netty-event-loop-group.jpg" alt="netty-event-loop-group"></p>
+<p>A server needs two distinct sets of Channels. The first set will contain a single ServerChannel representing the server&#x2019;s own listening socket, bound to a local port. The second set will contain all of the Channels that have been created to handle incoming client connections&#x2014;one for each connection the server has accepted. Figure 3.4 illustrates this model, and shows why two distinct EventLoopGroups are required.</p>
+<p><img src="assets/netty-callback.jpg" alt="netty-callback">
+<img src="assets/netty-channel-handler-chain.jpg" alt="netty-channel-handler-chain">
+<img src="assets/netty-channel-handler.jpg" alt="netty-channe-handler"></p>
+<h2 id="transports">Transports</h2>
+<p>Selection operation bit-set</p>
+<ul>
+<li>OP_ACCEPT Requests notification when a new connection is accepted, and a Channel is created.</li>
+<li>OP_CONNECT Requests notification when a connection is established.</li>
+<li>OP_READ Requests notification when data is ready to be read from the Channel.</li>
+<li>OP_WRITE Requests notification when it is possible to write more data to the Channel. This handles cases when the socket buffer is completely filled, which usually happens when data is transmitted more rapidly than the remote peer can handle.</li>
+</ul>
+<p>Selecting and processing state changes</p>
+<p><img src="assets/netty-state-change.jpg" alt="netty-state-chagne"></p>
+<p><strong>ZERO-COPY</strong>:</p>
+<blockquote>
+<p>Zero-copy is a feature currently available only with NIO and Epoll transport. It allows you to quickly and efficiently move data from a file system to the network without copying from kernel space to user space, which can significantly improve performance in protocols such as FTP or HTTP. This feature is not supported by all OSes. Specifically it is not usable with file systems that implement data encryption or compression&#x2014;only the raw content of a file can be transferred. Conversely, transferring files that have already been encrypted isn&#x2019;t a problem.</p>
+</blockquote>
+<p>Epoll&#x2014;native non-blocking transport for Linux</p>
+<p><strong>epoll</strong>:</p>
+<blockquote>
+<p>The growing importanceKof Linux as a platform for high-performance networking has led to the development of a number of advanced features, including epoll, a highly scalable I/O event-notification feature. This API, available since version 2.5.44 (2002) of the Linux kernel, provides better performance than the older POSIX select and poll system calls[2] and is now the de facto standard for non-blocking networking on Linux. The Linux JDK NIO API uses these epoll calls.</p>
+</blockquote>
+<p>Netty provides an NIO API for Linux that uses epoll in a way that&#x2019;s more consistent with its own design and less costly in the way it uses interrupts.[3] Consider utilizing this version if your applications are intended for Linux; you&#x2019;ll find that performance under heavy load is superior to that of the JDK&#x2019;s NIO implementation.</p>
+<p><img src="assets/netty-oldio.jpg" alt="oldio"></p>
+<p>Given this, you may wonder <em>how Netty can support NIO with the same API used for asynchronous transports</em>. <strong>The answer is that Netty makes use of the SO_TIMEOUT Socket flag, which specifies the maximum number of milliseconds to wait for an I/O operation to complete.</strong> If the operation fails to complete within the specified interval, a SocketTimeoutException is thrown. Netty catches this exception and continues the processing loop. On the next EventLoop run, it will try again. This is the only way an asynchronous framework like Netty can support OIO.[5] Figure 4.3 illustrates this logic.</p>
+<h2 id="bytebuf">ByteBuf</h2>
+<p>Netty&#x2019;s alternative to ByteBuffer is ByteBuf, a powerful implementation that addresses the limitations of the JDK API and provides a better API for network application developers.
+ByteBuf &#x7684;&#x7279;&#x6027;&#xFF1A;</p>
+<p>&#x25A0; It&#x2019;s extensible to user-defined buffer types.
+&#x25A0; Transparent zero-copy is achieved by a built-in composite buffer type.
+&#x25A0; Capacity is expanded on demand (as with the JDK StringBuilder).
+&#x25A0; Switching between reader and writer modes doesn&#x2019;t require calling ByteBuffer&#x2019;s
+flip() method.
+&#x25A0; Reading and writing employ distinct indices.
+&#x25A0; Method chaining is supported.
+&#x25A0; Reference counting is supported.
+&#x25A0; Pooling is supported.</p>
+<p>ByteBuf &#x7EF4;&#x62A4;&#x4E24;&#x4E2A;&#x7D22;&#x5F15;&#xFF0C;&#x8BFB;&#x7D22;&#x5F15;&#x548C;&#x5199;&#x7D22;&#x5F15;</p>
+<p><img src="assets/netty-ByteBuf-index.jpg" alt="netty-bytebuf-index"></p>
+<h3 id="heap-buffers">Heap Buffers</h3>
+<p>stores the data in the heap space of the JVM
+&#x5806; buffer &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-java">ByteBuf heapBuf = ...;
+<span class="hljs-keyword">if</span> (heapBuf.hasArray()) {
+    <span class="hljs-keyword">byte</span>[] array = heapBuf.array();
+    <span class="hljs-keyword">int</span> offset = heapBuf.arrayOffset() + heapBuf.readerIndex();
+    <span class="hljs-keyword">int</span> length = heapBuf.readableBytes();
+    handleArray(array, offset, length);
+}
+</code></pre>
+<h3 id="direct-buffers">Direct Buffers</h3>
+<p>Direct buffer is another ByteBuf pattern. &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5806;&#x5916;&#x5185;&#x5B58;&#x3002;&#x76EE;&#x7684;&#x662F;&#x907F;&#x514D;&#x6BCF;&#x6B21; I/O &#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x5C06;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x4E2D;&#x95F4;&#x7F13;&#x51B2;&#x533A;&#x3002; This aims to avoid copying the buffer&#x2019;s contents to (or from) an intermediate buffer before (or after) each invocation of a native I/O operation.
+&#x5806;&#x5916; buffer &#x4F7F;&#x7528;&#x9700;&#x8981;&#x5148;&#x590D;&#x5236;&#x5230;&#x5806;&#x5185;</p>
+<pre><code class="lang-java">ByteBuf directBuf = ...;
+<span class="hljs-keyword">if</span> (!directBuf.hasArray()) {
+    <span class="hljs-keyword">int</span> length = directBuf.readableBytes();
+    <span class="hljs-keyword">byte</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[length];
+    directBuf.getBytes(directBuf.readerIndex(), array);
+    handleArray(array, <span class="hljs-number">0</span>, length);
+}
+</code></pre>
+<p>&#x6267;&#x884C;&#x7F51;&#x7EDC; IO &#x6216;&#x8005;&#x6587;&#x4EF6; IO &#x4E3A;&#x5565;&#x8981;&#x901A;&#x8FC7;&#x5806;&#x5916;&#x5185;&#x5B58;&#xFF1F;
+DirectByteBuffer &#x901A;&#x8FC7; malloc &#x521B;&#x5EFA;&#x7684;&#x662F; C Heap &#x7684; buffer&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x91C7;&#x7528; C Heap &#x7684; buffer &#x4E0E; kernel &#x4EA4;&#x4E92;&#xFF1F;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528; DirectBuffer &#x5C31;&#x4F1A;&#x5C11;&#x4E00;&#x6B21;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#x3002;&#x5982;&#x679C;&#x662F;&#x975E; DirectBuffer&#xFF0C;JDK&#x4F1A;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;DirectBuffer&#xFF0C;&#x518D;&#x53BB;&#x6267;&#x884C;&#x771F;&#x6B63;&#x7684;&#x5199;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x628A;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x901A;&#x8FC7;JNI&#x4F20;&#x9012;&#x7ED9;&#x5E95;&#x5C42;&#x7684;C&#x5E93;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x5931;&#x6548;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;GC&#x7BA1;&#x7406;&#x4E0B;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4F1A;&#x5728;Java&#x5806;&#x4E2D;&#x79FB;&#x52A8;&#x7684;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x6211;&#x628A;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x4F20;&#x7ED9;&#x5E95;&#x5C42;&#x7684; write&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6BB5;&#x5185;&#x5B58;&#x5374;&#x56E0;&#x4E3A; GC &#x6574;&#x7406;&#x5185;&#x5B58;&#x800C;&#x5931;&#x6548;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x5FC5;&#x987B;&#x8981;&#x628A;&#x5F85;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x653E;&#x5230;&#x4E00;&#x4E2A; GC &#x7BA1;&#x4E0D;&#x7740;&#x7684;&#x5730;&#x65B9;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x8C03;&#x7528;native &#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#xFF0C;&#x6570;&#x636E;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x5806;&#x5916;&#x5185;&#x5B58;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5806;&#x5916;&#x7684; buffer &#x6211;&#x4EEC;&#x662F;&#x6CA1;&#x6CD5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x4E00;&#x822C;&#x5148;&#x590D;&#x5236;&#x5230;&#x4E2D;&#x95F4;&#x7F13;&#x51B2;&#x533A;&#x3002;</p>
+<h3 id="composite-buffers">Composite Buffers</h3>
+<h2 id="&#x8BFB;&#x4E66;&#x7B14;&#x8BB0;">&#x8BFB;&#x4E66;&#x7B14;&#x8BB0;</h2>
+<p>java &#x5728; 04 &#x5E74; 1.4 &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301; no-blocking I/O&#xFF0C;&#x5728; <code>java.nio</code> &#x5305;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x4F7F;&#x7528; Netty &#x800C;&#x4E0D;&#x76F4;&#x63A5;&#x4F7F;&#x7528; nio&#xFF1F;</p>
+<blockquote>
+<p>Although many applications have been built using the Java NIO API directly, doing so correctly and safely is far from trivial. In particular, processing and dispatching I/O reliably and efficiently under heavy load is a cumbersome and error-prone task best left to a high-performance networking expert&#x2014;Netty</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Netty features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design</td>
+<td>Unified API for multiple transport types, both blocking and non-blocking. Simple but powerful threading model. True connectionless datagram socket support. Chaining of logic components to support reuse.</td>
+</tr>
+<tr>
+<td>Ease of use</td>
+<td>Extensive Javadoc and large example set. No required dependencies beyond JDK 1.6+. (Some optional features may require Java 1.7+ and/or additional dependencies.)</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Better throughput and lower latency than core Java APIs. Reduced resource consumption thanks to pooling and reuse. Minimal memory copying.</td>
+</tr>
+<tr>
+<td>Robustness</td>
+<td>No OutOfMemoryError due to slow, fast, or overloaded connection. Eliminates unfair read/write ratio typical of NIO applications in high-speed networks.</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Complete SSL/TLS and StartTLS support. Usable in restricted environments such as Applet or OSGI.</td>
+</tr>
+<tr>
+<td>Community-driven</td>
+<td>Release early and often.</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F02;&#x6B65;&#x548C;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;</p>
+<ul>
+<li>Non-blocking network calls free us from having to wait for the completion of an operation. Fully asynchronous I/O builds on this feature and carries it a step further: an asynchronous method returns immediately and notifies the user when it is complete, directly or at a later time.</li>
+<li>Selectors allow us to monitor many connections for events with many fewer threads.</li>
+</ul>
+<p>netty &#x7684;&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tcp-ip.html" class="navigation navigation-prev " aria-label="Previous page: tcp ip">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../post/" class="navigation navigation-next " aria-label="Next page: Blog">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"netty in action","level":"1.7.5","depth":2,"next":{"title":"Blog","level":"1.8","depth":1,"path":"post/README.md","ref":"post/README.md","articles":[{"title":"my knowledgemap","level":"1.8.1","depth":2,"path":"post/00-build-myself-developer-knowledgemap.md","ref":"post/00-build-myself-developer-knowledgemap.md","articles":[]},{"title":"cpu and kernal","level":"1.8.2","depth":2,"path":"post/01-cpu-and-kernal.md","ref":"post/01-cpu-and-kernal.md","articles":[]},{"title":"linux select","level":"1.8.3","depth":2,"path":"post/02-linux-select.md","ref":"post/02-linux-select.md","articles":[]},{"title":"thread vs process","level":"1.8.4","depth":2,"path":"post/03-thread-vs-process.md","ref":"post/03-thread-vs-process.md","articles":[]},{"title":"css in js","level":"1.8.5","depth":2,"path":"post/04-css-in-js.md","ref":"post/04-css-in-js.md","articles":[]}]},"previous":{"title":"tcp ip","level":"1.7.4","depth":2,"path":"reading/tcp-ip.md","ref":"reading/tcp-ip.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc"],"pluginsConfig":{"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"before-first","showByDefault":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"reading/neey-in-action.md","mtime":"2020-10-28T08:06:27.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-29T09:16:41.410Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

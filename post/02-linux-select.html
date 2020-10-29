@@ -1,0 +1,1092 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>linux select · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-thread-vs-process.html" />
+    
+    
+    <link rel="prev" href="01-cpu-and-kernal.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/linux-basis.html">
+            
+                <a href="../linux/linux-basis.html">
+            
+                    
+                    linux basis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/linux-filesystem.html">
+            
+                <a href="../linux/linux-filesystem.html">
+            
+                    
+                    linux filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux/linux-commands.html">
+            
+                <a href="../linux/linux-commands.html">
+            
+                    
+                    linux command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux/linux-filesystem.html">
+            
+                <a href="../linux/linux-filesystem.html">
+            
+                    
+                    linux filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../awesome/">
+            
+                <a href="../awesome/">
+            
+                    
+                    Awesome
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../awesome/git.html">
+            
+                <a href="../awesome/git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../awesome/gitbook.html">
+            
+                <a href="../awesome/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../docker/">
+            
+                <a href="../docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../docker/docker-basis.html">
+            
+                <a href="../docker/docker-basis.html">
+            
+                    
+                    docker basis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../docker/docker-swarm.html">
+            
+                <a href="../docker/docker-swarm.html">
+            
+                    
+                    docker swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../docker/dockerfile.html">
+            
+                <a href="../docker/dockerfile.html">
+            
+                    
+                    dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../docker/docker-composefile.html">
+            
+                <a href="../docker/docker-composefile.html">
+            
+                    
+                    docker composefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../docker/docker-practice.html">
+            
+                <a href="../docker/docker-practice.html">
+            
+                    
+                    docker practice
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../javascript/canvas.html">
+            
+                <a href="../javascript/canvas.html">
+            
+                    
+                    canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../javascript/react/">
+            
+                <a href="../javascript/react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../javascript/react/immer.html">
+            
+                <a href="../javascript/react/immer.html">
+            
+                    
+                    immer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../javascript/tools/">
+            
+                <a href="../javascript/tools/">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../javascript/tools/babel.html">
+            
+                <a href="../javascript/tools/babel.html">
+            
+                    
+                    babel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../javascript/tools/gulp.html">
+            
+                <a href="../javascript/tools/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../javascript/tools/webpack.html">
+            
+                <a href="../javascript/tools/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../reading/">
+            
+                <a href="../reading/">
+            
+                    
+                    Reading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../reading/css-world.html">
+            
+                <a href="../reading/css-world.html">
+            
+                    
+                    CSS world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../reading/design-pattern-guru.html">
+            
+                <a href="../reading/design-pattern-guru.html">
+            
+                    
+                    Design Pattern guru
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../reading/compilers.html">
+            
+                <a href="../reading/compilers.html">
+            
+                    
+                    compilers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../reading/tcp-ip.html">
+            
+                <a href="../reading/tcp-ip.html">
+            
+                    
+                    tcp ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../reading/neey-in-action.html">
+            
+                <a href="../reading/neey-in-action.html">
+            
+                    
+                    netty in action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Blog
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="00-build-myself-developer-knowledgemap.html">
+            
+                <a href="00-build-myself-developer-knowledgemap.html">
+            
+                    
+                    my knowledgemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="01-cpu-and-kernal.html">
+            
+                <a href="01-cpu-and-kernal.html">
+            
+                    
+                    cpu and kernal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="02-linux-select.html">
+            
+                <a href="02-linux-select.html">
+            
+                    
+                    linux select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="03-thread-vs-process.html">
+            
+                <a href="03-thread-vs-process.html">
+            
+                    
+                    thread vs process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="04-css-in-js.html">
+            
+                <a href="04-css-in-js.html">
+            
+                    
+                    css in js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >linux select</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6700;&#x8FD1;&#x5728;&#x770B; UNIX &#x7F51;&#x7EDC;&#x7F16;&#x7A0B;&#xFF0C;&#x5BF9; I/O &#x590D;&#x7528;&#x8FD9;&#x4E00;&#x7AE0;&#x8BB2;&#x7684; select &#x5F88;&#x611F;&#x5174;&#x8DA3;&#x3002;</p>
+<h2 id="&#x591A;&#x8FDB;&#x7A0B;&#x963B;&#x585E;-io-&#x7684;-socket-&#x670D;&#x52A1;">&#x591A;&#x8FDB;&#x7A0B;&#x963B;&#x585E; I/O &#x7684; socket &#x670D;&#x52A1;</h2>
+<p>&#x524D;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x670D;&#x52A1;&#x7AEF;&#x5904;&#x7406; socket &#x7684;&#x4E3B;&#x8981;&#x65B9;&#x5F0F;&#x662F;&#x591A;&#x8FDB;&#x7A0B;&#x963B;&#x585E; I/O &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E3B;&#x8FDB;&#x7A0B;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x76D1;&#x542C;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x963B;&#x585E;&#x4E8E; <code>accept</code>&#xFF0C;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x7684; tcp &#x8FDE;&#x63A5;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x3002;
+&#x7236;&#x8FDB;&#x7A0B;&#x8C03;&#x7528; fork() &#x4E4B;&#x540E;&#xFF0C;&#x7EE7;&#x7EED; accept &#x7B49;&#x5F85;&#x4E0B;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x4E14;&#x540C;&#x65F6;&#x6267;&#x884C; close &#x6765;&#x5173;&#x95ED;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5B50;&#x8FDB;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x5957;&#x63A5;&#x5B57;&#x3002;
+<code>fork()</code> &#x4E4B;&#x540E;&#xFF0C;&#x7236;&#x8FDB;&#x7A0B;&#x548C;&#x5B50;&#x8FDB;&#x7A0B;&#x7684; connfd &#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x7684;&#x7CFB;&#x7EDF;&#x7EA7;&#x6587;&#x4EF6;&#x8868;&#x3002;
+close &#x4E00;&#x4E2A; TCP &#x5957;&#x63A5;&#x5B57;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F;&#x5C06;&#x8BE5;&#x5957;&#x63A5;&#x5B57;&#x6807;&#x8BB0;&#x4E3A;&#x5DF2;&#x5173;&#x95ED;&#xFF0C;&#x7136;&#x540E;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x5230;&#x8C03;&#x7528;&#x8FDB;&#x7A0B;&#x3002;&#x8BE5;&#x5957;&#x63A5;&#x5B57;&#x63CF;&#x8FF0;&#x7B26;&#x4E0D;&#x80FD;&#x518D;&#x7531;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A; read/write &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x3002;close &#x53EA;&#x4F1A;&#x5BFC;&#x81F4;&#x5957;&#x63A5;&#x5B57;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x51CF; 1&#xFF0C;&#x7531;&#x4E8E;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4ECD;&#x7136;&#x5927;&#x4E8E; 0&#x3002;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77; TCP &#x7684; FIN &#x64CD;&#x4F5C;&#x3002;
+&#x6B64;&#x540E;&#xFF0C;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6240;&#x6709;&#x4EA4;&#x4E92;&#x90FD;&#x5728;&#x5B50;&#x8FDB;&#x7A0B;&#x91CC;&#x9762;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span>
+<span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+    <span class="hljs-keyword">int</span>                    listenfd, connfd;
+    <span class="hljs-keyword">pid_t</span>                childpid;
+    <span class="hljs-keyword">socklen_t</span>            clilen;
+    <span class="hljs-keyword">struct</span> sockaddr_in    cliaddr, servaddr;
+    <span class="hljs-function"><span class="hljs-keyword">void</span>                <span class="hljs-title">sig_chld</span><span class="hljs-params">(<span class="hljs-keyword">int</span>)</span></span>;
+
+    listenfd = Socket(AF_INET, SOCK_STREAM, <span class="hljs-number">0</span>);
+
+    bzero(&amp;servaddr, <span class="hljs-keyword">sizeof</span>(servaddr));
+    servaddr.sin_family      = AF_INET;
+    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    servaddr.sin_port        = htons(SERV_PORT);
+
+    Bind(listenfd, (SA *) &amp;servaddr, <span class="hljs-keyword">sizeof</span>(servaddr));
+
+    Listen(listenfd, LISTENQ);
+
+    Signal(SIGCHLD, sig_chld);
+
+    <span class="hljs-keyword">for</span> ( ; ; ) {
+        clilen = <span class="hljs-keyword">sizeof</span>(cliaddr);
+        <span class="hljs-comment">// block io</span>
+        <span class="hljs-keyword">if</span> ( (connfd = accept(listenfd, (SA *) &amp;cliaddr, &amp;clilen)) &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> (errno == EINTR)
+                <span class="hljs-keyword">continue</span>;        <span class="hljs-comment">/* back to for() */</span>
+            <span class="hljs-keyword">else</span>
+                err_sys(<span class="hljs-string">&quot;accept error&quot;</span>);
+        }
+
+        <span class="hljs-keyword">if</span> ( (childpid = Fork()) == <span class="hljs-number">0</span>) {    <span class="hljs-comment">/* child process */</span>
+            Close(listenfd);    <span class="hljs-comment">/* close listening socket */</span>
+            str_echo(connfd);    <span class="hljs-comment">/* process the request */</span>
+            <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+        }
+        <span class="hljs-comment">// &#x7236;&#x8FDB;&#x7A0B;&#x5173;&#x95ED; socket&#xFF0C;&#x4F46;&#x662F;&#x5B50;&#x8FDB;&#x7A0B;&#x4F9D;&#x7136;</span>
+        Close(connfd);            <span class="hljs-comment">/* parent closes connected socket */</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-bash">$ ps -ef|grep tcpserv
+  501 79428 50780   0  3:05&#x4E0B;&#x5348; ttys005    0:00.00 ./tcpserv01
+  501 79952 79428   0  3:06&#x4E0B;&#x5348; ttys005    0:00.00 ./tcpserv01
+  501 82302 80751   0  3:12&#x4E0B;&#x5348; ttys008    0:00.00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn tcpserv
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code
+$ pstree -p79952
+-+= 00001 root /sbin/launchd
+ \-+= 02926 dahuang /Applications/iTerm.app/Contents/MacOS/iTerm2
+   \-+= 50778 dahuang /Applications/iTerm.app/Contents/MacOS/iTerm2 --server /usr/bin/login -fpl dahuang /Applications/iTerm.app/Conte
+     \-+= 50779 root /usr/bin/login -fpl dahuang /Applications/iTerm.app/Contents/MacOS/iTerm2 --launch_shell
+       \-+= 50780 dahuang -zsh
+         \-+= 79428 dahuang ./tcpserv01
+           \--- 79952 dahuang ./tcpserv01
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code
+$ lsof -anP -p 79952
+COMMAND     PID        USER   FD   TYPE             DEVICE  SIZE/OFF     NODE NAME
+tcpserv01 79952 dahuang  cwd    DIR                1,4      1428 84297379 /Users/dahuang/Code/c/unpv13e/tcpcliserv
+tcpserv01 79952 dahuang  txt    REG                1,4     24380 84355524 /Users/dahuang/Code/c/unpv13e/tcpcliserv/tcpserv01
+tcpserv01 79952 dahuang  txt    REG                1,4    698896 37691632 /usr/lib/dyld
+tcpserv01 79952 dahuang  txt    REG                1,4 662913024 82175106 /private/var/db/dyld/dyld_shared_cache_x86_64h
+tcpserv01 79952 dahuang    0u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79952 dahuang    1u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79952 dahuang    2u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79952 dahuang    4u  IPv4 0x31562faf59a2aecd       0t0      TCP 127.0.0.1:9877-&gt;127.0.0.1:56004 (ESTABLISHED)
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code
+$ lsof -anP -p 79428
+COMMAND     PID        USER   FD   TYPE             DEVICE  SIZE/OFF     NODE NAME
+tcpserv01 79428 dahuang  cwd    DIR                1,4      1428 84297379 /Users/dahuang/Code/c/unpv13e/tcpcliserv
+tcpserv01 79428 dahuang  txt    REG                1,4     24380 84355524 /Users/dahuang/Code/c/unpv13e/tcpcliserv/tcpserv01
+tcpserv01 79428 dahuang  txt    REG                1,4    698896 37691632 /usr/lib/dyld
+tcpserv01 79428 dahuang  txt    REG                1,4 662913024 82175106 /private/var/db/dyld/dyld_shared_cache_x86_64h
+tcpserv01 79428 dahuang    0u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79428 dahuang    1u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79428 dahuang    2u   CHR               16,5 0t2162309     1321 /dev/ttys005
+tcpserv01 79428 dahuang    3u  IPv4 0x31562faf500d10bd       0t0      TCP *:9877 (LISTEN)
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6709;&#x4E0D;&#x597D;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x7236;&#x8FDB;&#x7A0B;&#x6302;&#x6389;&#x4E4B;&#x540E;&#xFF0C;&#x5B50;&#x8FDB;&#x7A0B;&#x4F9D;&#x7136;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;&#x7236;&#x8FDB;&#x7A0B;&#x5C06; PPID &#x8FC7;&#x7EE7;&#x7ED9;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x7AEF;&#x53E3;&#x867D;&#x7136;&#x6CA1;&#x6709;&#x5728;&#x76D1;&#x542C;&#xFF0C;&#x4F46;&#x662F;&#x4F9D;&#x7136;&#x662F;&#x5F00;&#x7740;&#x7684;&#x3002;TCP &#x8FDE;&#x63A5;&#x4E0D;&#x4F1A;&#x65AD;&#x5F00;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x4F9D;&#x7136;&#x7EF4;&#x62A4;&#x7740;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x80FD;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002;</p>
+<pre><code class="lang-bash">$ ./tcpserv01 &amp;
+[1] 37437
+
+<span class="hljs-comment"># &#x5F00;&#x542F;&#x4E00;&#x4E2A; telnet &#x5BA2;&#x6237;&#x7AEF;</span>
+telnet localhost 9877
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code/c/unpv13e/tcpcliserv
+$ ps -ef|grep <span class="hljs-string">&apos;[t]cpserv01&apos;</span>
+  501 37437 79439   0  1:46&#x4E0B;&#x5348; ttys007    0:00.00 ./tcpserv01
+  501 37454 37437   0  1:47&#x4E0B;&#x5348; ttys007    0:00.00 ./tcpserv01
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code/c/unpv13e/tcpcliserv
+$ lsof -i:9877
+COMMAND     PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+tcpserv01 37437 dahuang    3u  IPv4 0x31562faf360195d5      0t0  TCP *:9877 (LISTEN)
+telnet    37453 dahuang    5u  IPv4 0x31562faf608170bd      0t0  TCP localhost:58901-&gt;localhost:9877 (ESTABLISHED)
+tcpserv01 37454 dahuang    4u  IPv4 0x31562faf58a3c0bd      0t0  TCP localhost:9877-&gt;localhost:58901 (ESTABLISHED)
+
+<span class="hljs-comment"># &#x6740;&#x6B7B;&#x7236;&#x8FDB;&#x7A0B;</span>
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code/c/unpv13e/tcpcliserv
+$ <span class="hljs-built_in">kill</span> -9 37437
+[1]  + 37437 killed     ./tcpserv01
+
+<span class="hljs-comment"># &#x5B50;&#x8FDB;&#x7A0B;&#x4F9D;&#x7136;&#x5B58;&#x5728;</span>
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code/c/unpv13e/tcpcliserv
+$ lsof -i:9877
+COMMAND     PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+telnet    37453 dahuang    5u  IPv4 0x31562faf608170bd      0t0  TCP localhost:58901-&gt;localhost:9877 (ESTABLISHED)
+tcpserv01 37454 dahuang    4u  IPv4 0x31562faf58a3c0bd      0t0  TCP localhost:9877-&gt;localhost:58901 (ESTABLISHED)
+</code></pre>
+<h3 id="tcpip-&#x548C;-socket-&#x7684;&#x533A;&#x522B;">TCP/IP &#x548C; Socket &#x7684;&#x533A;&#x522B;</h3>
+<p>socket&#x662F;&#x5BF9;TCP/IP&#x534F;&#x8BAE;&#x7684;&#x5C01;&#x88C5;&#xFF0C;Socket&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x662F;&#x534F;&#x8BAE;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF08;API&#xFF09;&#xFF0C;&#x901A;&#x8FC7;Socket&#xFF0C;&#x6211;&#x4EEC;&#x624D;&#x80FD;&#x4F7F;&#x7528;TCP/IP&#x534F;&#x8BAE;</p>
+<p>TCP/IP&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#x6808;&#xFF0C;&#x5C31;&#x50CF;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x4E00;&#x6837;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x8981;&#x63D0;&#x4F9B;&#x5BF9;&#x5916;&#x7684;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;&#x3002;&#x8FD9;&#x4E2A;&#x5C31;&#x50CF;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4F1A;&#x63D0;&#x4F9B;&#x6807;&#x51C6;&#x7684;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#xFF0C;&#x6BD4;&#x5982;win32&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#x4E00;&#x6837;&#xFF0C;TCP/IP&#x4E5F;&#x8981;&#x63D0;&#x4F9B;&#x53EF;&#x4F9B;&#x7A0B;&#x5E8F;&#x5458;&#x505A;&#x7F51;&#x7EDC;&#x5F00;&#x53D1;&#x6240;&#x7528;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;Socket&#x7F16;&#x7A0B;&#x63A5;&#x53E3;</p>
+<h2 id="select">select</h2>
+<p>&#x5FD8;&#x4E86;&#x4E4B;&#x524D;&#x5728;&#x54EA;&#x770B;&#x5230;&#x4E00;&#x53E5;&#x8BDD; <code>On a UNIX system, everying is a file; if something is not a file, it is a process.</code>&#xFF0C;&#x5728; unix &#x7CFB;&#x7EDF;&#x4E00;&#x5207;&#x90FD;&#x662F;&#x6587;&#x4EF6;&#x3002;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x5BF9;&#x5E94;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x91CC;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>lsof -anP -p &lt;pid&gt;</code> &#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6253;&#x5F00;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x3002;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x662F;&#x4ECE; 0 &#x5F00;&#x59CB;&#x7684;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x3002;</p>
+<p>&#x901A;&#x8FC7; <code>man 2 select</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; select &#x53EF;&#x4EE5;&#x76D1;&#x63A7;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5185;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">select</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nfds, fd_set *<span class="hljs-keyword">restrict</span> readfds, fd_set *<span class="hljs-keyword">restrict</span> writefds, fd_set *<span class="hljs-keyword">restrict</span> errorfds, <span class="hljs-keyword">struct</span> timeval *<span class="hljs-keyword">restrict</span> timeout)</span></span>;
+</code></pre>
+<ul>
+<li>nfds &#x8868;&#x793A;&#x76D1;&#x542C;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x603B;&#x6570;&#xFF0C;&#x6BD4;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;&#x5927; 1</li>
+<li>readfds writefds exceptfds &#x8868;&#x793A;&#x53EF;&#x8BFB;&#x3001;&#x53EF;&#x5199;&#x3001;&#x5F02;&#x5E38;&#x4E8B;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;</li>
+<li>timeout &#x7528;&#x4E8E;&#x8BBE;&#x7F6E; select &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x544A;&#x8BC9;&#x5185;&#x6838;&#x7B49;&#x5F85;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x653E;&#x5F03;&#x7B49;&#x5F85;&#xFF0C;&#x4E3A; NULL &#x8868;&#x793A;&#x7B49;&#x5F85;&#x65E0;&#x9650;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x8D85;&#x65F6;&#x8FD4;&#x56DE; 0 &#x9519;&#x8BEF;&#x8FD4;&#x56DE; -1 &gt;0 &#x5219;&#x4E3A;&#x51C6;&#x5907;&#x597D;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x4E2A;&#x6570;</li>
+</ul>
+<p>&#x901A;&#x8FC7; <strong>fd_set</strong> &#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;&#xFF0C;&#x6765;&#x7EF4;&#x62A4;&#x9700;&#x8981;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x3002; fd_set &#x7528;&#x4E00;&#x4E2A; bit array &#x6765;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;
+&#x6BD4;&#x5982; <strong>00010001</strong>&#xFF0C;FD_ISSET(3, &amp;set)&#xFF0C;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x63CF;&#x8FF0; 3 &#x662F;&#x5426;&#x5728; set &#x91CC;&#x9762;&#xFF0C;&#x5373;&#x5224;&#x65AD; bit &#x6570;&#x7EC4;&#x7B2C; 4 &#x4F4D;&#x662F;&#x5426;&#x662F; 1&#x3002;
+&#x4E3B;&#x8981;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;</p>
+<ul>
+<li>FD_ZERO(fd_set *fdset);&#x5C06;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x6E05;&#x7A7A;&#xFF0C;&#x5728;&#x5BF9;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6E05;&#x7A7A;&#xFF0C;&#x7531;&#x4E8E;&#x5728;&#x7CFB;&#x7EDF;&#x5206;&#x914D;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x540E;&#xFF0C;&#x901A;&#x5E38;&#x5E76;&#x4E0D;&#x4F5C;&#x6E05;&#x7A7A;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x662F;&#x4E0D;&#x53EF;&#x77E5;&#x7684;&#x3002;</li>
+<li>FD_SET(fd_set *fdset);&#x7528;&#x4E8E;&#x5728;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</li>
+<li>FD_CLR(fd_set *fdset);&#x7528;&#x4E8E;&#x5728;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x96C6;&#x5408;&#x4E2D;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</li>
+<li>FD_ISSET(int fd,fd_set *fdset);&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x662F;&#x5426;&#x5728;&#x8BE5;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x4E0D;&#x5728;&#x8FD4;&#x56DE; 0&#x3002;</li>
+</ul>
+<p>&#x5C06;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x6CE8;&#x518C;&#x5230; fd_set &#x91CC;&#x9762;&#xFF0C;&#x5F53;&#x6CE8;&#x518C;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x6709;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x6216;&#x8005; select &#x8D85;&#x65F6;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#xFF0C;&#x8FD4;&#x56DE;&#x7684; fd_set &#x53EA;&#x5305;&#x542B;&#x4E86;&#x53D1;&#x751F;&#x4E8B;&#x4EF6;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x904D;&#x5386; fd_set &#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x76F8;&#x6BD4;&#x4E4B;&#x524D;&#x591A;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x76D1;&#x542C;&#x5957;&#x63A5;&#x5B57;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x5957;&#x63A5;&#x5B57;&#x5168;&#x90E8;&#x90FD;&#x6CE8;&#x518C;&#x5230; select &#x91CC;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E; select() &#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6765;&#x5224;&#x65AD;&#x662F;&#x65B0;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x8FD8;&#x662F;&#x6B63;&#x5E38;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x903B;&#x8F91;&#x5728;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x91CC;&#x9762;&#x5904;&#x7406;&#x5C31; ok &#x4E86;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;errno.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;netinet/in.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;arpa/inet.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MYPORT 1234 <span class="hljs-comment">// the port users will be connecting to</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BACKLOG 5 <span class="hljs-comment">// how many pending connections queue will hold</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BUF_SIZE 200</span>
+
+<span class="hljs-keyword">int</span> fd_A[BACKLOG]; <span class="hljs-comment">// accepted connection fd</span>
+<span class="hljs-keyword">int</span> conn_amount;   <span class="hljs-comment">// current connection amount</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">showclient</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;client amount: %d\n&quot;</span>, conn_amount);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; BACKLOG; i++)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d]:%d  &quot;</span>, i, fd_A[i]);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n\n&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">int</span> sock_fd, new_fd;            <span class="hljs-comment">// listen on sock_fd, new connection on new_fd</span>
+    <span class="hljs-keyword">struct</span> sockaddr_in server_addr; <span class="hljs-comment">// server address information</span>
+    <span class="hljs-keyword">struct</span> sockaddr_in client_addr; <span class="hljs-comment">// connector&apos;s address information</span>
+    <span class="hljs-keyword">socklen_t</span> sin_size;
+    <span class="hljs-keyword">int</span> yes = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">char</span> buf[BUF_SIZE];
+    <span class="hljs-keyword">int</span> ret;
+    <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">if</span> ((sock_fd = socket(AF_INET, SOCK_STREAM, <span class="hljs-number">0</span>)) == <span class="hljs-number">-1</span>)
+    {
+        perror(<span class="hljs-string">&quot;socket&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;socket_fd = %d\n&quot;</span>, sock_fd);
+
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E; socket &#x7684;&#x53C2;&#x6570;</span>
+    <span class="hljs-comment">//arg1 socket &#x63CF;&#x8FF0;&#x7B26; arg2 &#x57FA;&#x672C;&#x5957;&#x63A5;&#x5B57; arg3 &#x9009;&#x9879;&#x540D;&#x79F0; arg4 &#x9009;&#x9879;&#x503C; arg5 &#x9009;&#x9879;&#x957F;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &amp;yes, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>)) == <span class="hljs-number">-1</span>)
+    {
+        perror(<span class="hljs-string">&quot;setsockopt&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+
+    server_addr.sin_family = AF_INET;         <span class="hljs-comment">// host byte order</span>
+    server_addr.sin_port = htons(MYPORT);     <span class="hljs-comment">// short, network byte order</span>
+    server_addr.sin_addr.s_addr = INADDR_ANY; <span class="hljs-comment">// automatically fill with my IP</span>
+    <span class="hljs-built_in">memset</span>(server_addr.sin_zero, <span class="hljs-string">&apos;\0&apos;</span>, <span class="hljs-keyword">sizeof</span>(server_addr.sin_zero));
+    <span class="hljs-comment">// &#x7ED1;&#x5B9A; socket &#x5230;&#x5730;&#x5740;</span>
+    <span class="hljs-keyword">if</span> (bind(sock_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;server_addr, <span class="hljs-keyword">sizeof</span>(server_addr)) == <span class="hljs-number">-1</span>)
+    {
+        perror(<span class="hljs-string">&quot;bind&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-comment">// &#x76D1;&#x542C; socket</span>
+    <span class="hljs-keyword">if</span> (listen(sock_fd, BACKLOG) == <span class="hljs-number">-1</span>)
+    {
+        perror(<span class="hljs-string">&quot;listen&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;listen port %d\n&quot;</span>, MYPORT);
+
+    fd_set fdsr;
+    <span class="hljs-keyword">int</span> maxsock;
+    <span class="hljs-keyword">struct</span> timeval tv;
+
+    conn_amount = <span class="hljs-number">0</span>;
+    sin_size = <span class="hljs-keyword">sizeof</span>(client_addr);
+    maxsock = sock_fd;
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)
+    {
+        <span class="hljs-comment">// initialize file descriptor set</span>
+        FD_ZERO(&amp;fdsr);
+        <span class="hljs-comment">// &#x5C06;&#x5F53;&#x524D;&#x76D1;&#x542C; socket &#x63CF;&#x8FF0;&#x7B26;&#x653E;&#x5165;&#x96C6;&#x5408;</span>
+        FD_SET(sock_fd, &amp;fdsr);
+
+        <span class="hljs-comment">// timeout setting</span>
+        <span class="hljs-comment">// &#x8BBE;&#x7F6E; select 30s</span>
+        tv.tv_sec = <span class="hljs-number">30</span>;
+        tv.tv_usec = <span class="hljs-number">0</span>;
+
+        <span class="hljs-comment">// add active connection to fd set</span>
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; BACKLOG; i++)
+        {
+            <span class="hljs-keyword">if</span> (fd_A[i] != <span class="hljs-number">0</span>)
+            {
+                FD_SET(fd_A[i], &amp;fdsr);
+            }
+        }
+        <span class="hljs-comment">// fd &#x4ECE; 0 &#x5F00;&#x59CB;&#xFF0C;&#x6240;&#x4EE5;&#x76D1;&#x542C;&#x63CF;&#x8FF0;&#x7B26;&#x4E2A;&#x6570;&#x4E3A;&#x6700;&#x5927;&#x7684; sock + 1</span>
+        ret = select(maxsock + <span class="hljs-number">1</span>, &amp;fdsr, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, &amp;tv);
+        <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>)
+        {
+            perror(<span class="hljs-string">&quot;select&quot;</span>);
+            <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ret == <span class="hljs-number">0</span>)
+        {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;timeout\n&quot;</span>);
+            <span class="hljs-keyword">continue</span>;
+        }
+
+        <span class="hljs-comment">// check every fd in the set</span>
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; conn_amount; i++)
+        {
+            <span class="hljs-keyword">if</span> (FD_ISSET(fd_A[i], &amp;fdsr))
+            {
+                ret = recv(fd_A[i], buf, <span class="hljs-keyword">sizeof</span>(buf), <span class="hljs-number">0</span>);
+                <span class="hljs-comment">// &#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x95ED;</span>
+                <span class="hljs-keyword">if</span> (ret &lt;= <span class="hljs-number">0</span>)
+                { <span class="hljs-comment">// client close</span>
+                    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;client[%d] close\n&quot;</span>, i);
+                    close(fd_A[i]);
+                    FD_CLR(fd_A[i], &amp;fdsr);
+                    fd_A[i] = <span class="hljs-number">0</span>;
+                }
+                <span class="hljs-keyword">else</span>
+                { <span class="hljs-comment">// receive data</span>
+                    <span class="hljs-keyword">if</span> (ret &lt; BUF_SIZE)
+                        <span class="hljs-built_in">memset</span>(&amp;buf[ret], <span class="hljs-string">&apos;\0&apos;</span>, <span class="hljs-number">1</span>);
+                    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;client[%d] send:%s\n&quot;</span>, i, buf);
+                }
+            }
+        }
+
+        <span class="hljs-comment">// check whether a new connection comes</span>
+        <span class="hljs-keyword">if</span> (FD_ISSET(sock_fd, &amp;fdsr))
+        {
+            new_fd = accept(sock_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;client_addr, &amp;sin_size);
+            <span class="hljs-keyword">if</span> (new_fd &lt;= <span class="hljs-number">0</span>)
+            {
+                perror(<span class="hljs-string">&quot;accept&quot;</span>);
+                <span class="hljs-keyword">continue</span>;
+            }
+
+            <span class="hljs-comment">// add to fd queue</span>
+            <span class="hljs-keyword">if</span> (conn_amount &lt; BACKLOG)
+            {
+                fd_A[conn_amount++] = new_fd;
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;new connection client[%d] %s:%d\n&quot;</span>, conn_amount,
+                       inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+                <span class="hljs-keyword">if</span> (new_fd &gt; maxsock)
+                    maxsock = new_fd;
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;max connections arrive, exit\n&quot;</span>);
+                send(new_fd, <span class="hljs-string">&quot;bye&quot;</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>);
+                close(new_fd);
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        showclient();
+    }
+
+    <span class="hljs-comment">// close other connections</span>
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; BACKLOG; i++)
+    {
+        <span class="hljs-keyword">if</span> (fd_A[i] != <span class="hljs-number">0</span>)
+        {
+            close(fd_A[i]);
+        }
+    }
+
+    <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+}
+</code></pre>
+<pre><code class="lang-bash">$ ./tcpservselect01&amp;
+[1] 41696
+
+<span class="hljs-comment"># &#x53E6;&#x8D77;&#x4E24;&#x4E2A;&#x7A97;&#x53E3;&#x5F00;&#x542F;&#x4E24;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;</span>
+$ nc localhost 9877
+$ nc localhost 9877
+
+dahuang at rp <span class="hljs-keyword">in</span> ~/Code/c/unpv13e/tcpcliserv
+$ lsof -anP -p 41696
+COMMAND     PID        USER   FD   TYPE             DEVICE  SIZE/OFF     NODE NAME
+tcpservse 41696 dahuang  cwd    DIR                1,4      1496 84297379 /Users/dahuang/Code/c/unpv13e/tcpcliserv
+tcpservse 41696 dahuang  txt    REG                1,4     28324 84392020 /Users/dahuang/Code/c/unpv13e/tcpcliserv/tcpservselect01
+tcpservse 41696 dahuang  txt    REG                1,4    698896 37691632 /usr/lib/dyld
+tcpservse 41696 dahuang  txt    REG                1,4 662913024 82175106 /private/var/db/dyld/dyld_shared_cache_x86_64h
+tcpservse 41696 dahuang    0u   CHR               16,7  0t349236     1371 /dev/ttys007
+tcpservse 41696 dahuang    1u   CHR               16,7  0t349236     1371 /dev/ttys007
+tcpservse 41696 dahuang    2u   CHR               16,7  0t349236     1371 /dev/ttys007
+tcpservse 41696 dahuang    3u  IPv4 0x31562faf608182ad       0t0      TCP *:9877 (LISTEN)
+tcpservse 41696 dahuang    4u  IPv4 0x31562faf50a087c5       0t0      TCP 127.0.0.1:9877-&gt;127.0.0.1:59943 (ESTABLISHED)
+tcpservse 41696 dahuang    5u  IPv4 0x31562faf390712ad       0t0      TCP 127.0.0.1:9877-&gt;127.0.0.1:59947 (ESTABLISHED)
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://www.zhihu.com/question/25532384" target="_blank">&#x7EBF;&#x7A0B;&#x548C;&#x8FDB;&#x7A0B;&#x7684;&#x533A;&#x522B;</a></p>
+<p><a href="https://blog.csdn.net/Pk_zsq/article/details/6087367" target="_blank">TCP/IP&#x3001;Http&#x3001;Socket &#x7684;&#x533A;&#x522B;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-cpu-and-kernal.html" class="navigation navigation-prev " aria-label="Previous page: cpu and kernal">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-thread-vs-process.html" class="navigation navigation-next " aria-label="Next page: thread vs process">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"linux select","date":"2018-08-23T00:00:00.000Z","permalink":"linux-select","categories":["网络编程"],"tags":["linux"],"toc":true,"level":"1.8.3","depth":2,"next":{"title":"thread vs process","level":"1.8.4","depth":2,"path":"post/03-thread-vs-process.md","ref":"post/03-thread-vs-process.md","articles":[]},"previous":{"title":"cpu and kernal","level":"1.8.2","depth":2,"path":"post/01-cpu-and-kernal.md","ref":"post/01-cpu-and-kernal.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc"],"pluginsConfig":{"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"before-first","showByDefault":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"post/02-linux-select.md","mtime":"2020-10-27T06:40:49.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-29T09:16:41.410Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
